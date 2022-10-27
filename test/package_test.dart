@@ -20,6 +20,7 @@ import 'package:loading_animation_widget/src/three_rotating_dots/three_rotating_
 import 'package:loading_animation_widget/src/twisting_dots/twisting_dots.dart';
 import 'package:loading_animation_widget/src/two_rotating_arc/two_rotating_arc.dart';
 import 'package:loading_animation_widget/src/wave_dots/wave_dots.dart';
+
 import 'base_structure.dart';
 
 const Color _testColor = Color(0xFFFFFFFF);
@@ -38,8 +39,7 @@ void main() {
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('BounchingBall Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('BounchingBall Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const BouncingBall(
         color: _testColor,
@@ -50,8 +50,7 @@ void main() {
     tester.verifyTickersWereDisposed();
   });
 
-testWidgets('DiscreteCircle Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('DiscreteCircle Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const DiscreteCircle(
         color: _testColor,
@@ -64,11 +63,10 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('DotsTriangle Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('DotsTriangle Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const DotsTriangle(
-        color: _testColor,
+        first: _testColor,
         size: _testSize,
       )),
     );
@@ -76,8 +74,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('FallingDot Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('FallingDot Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const FallingDot(
         color: _testColor,
@@ -100,8 +97,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('FourRotatingDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('FourRotatingDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const FourRotatingDots(
         size: _testSize,
@@ -112,8 +108,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('HalfTringleDot Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('HalfTringleDot Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const HalfTriangleDot(
         size: _testSize,
@@ -124,8 +119,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('HexagonDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('HexagonDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const HexagonDots(
         size: _testSize,
@@ -136,8 +130,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('HorizontalRotatingDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('HorizontalRotatingDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const HorizontalRotatingDots(
         size: _testSize,
@@ -159,8 +152,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('NewtonCradle Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('NewtonCradle Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const NewtonCradle(
         size: _testSize,
@@ -171,8 +163,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('PrograssiveDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('PrograssiveDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const PrograssiveDots(
         size: _testSize,
@@ -183,8 +174,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('StaggeredDotsWave Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('StaggeredDotsWave Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const StaggeredDotsWave(
         size: _testSize,
@@ -195,8 +185,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('StretchedDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('StretchedDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const StretchedDots(
         size: _testSize,
@@ -207,8 +196,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('ThreeArchedCircle Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('ThreeArchedCircle Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const ThreeArchedCircle(
         size: _testSize,
@@ -219,8 +207,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('ThreeRotatingDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('ThreeRotatingDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const ThreeRotatingDots(
         size: _testSize,
@@ -231,8 +218,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('TwistingDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('TwistingDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const TwistingDots(
         size: _testSize,
@@ -243,8 +229,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
 
     tester.verifyTickersWereDisposed();
   });
-  testWidgets('TwoRotatingArc Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('TwoRotatingArc Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const TwoRotatingArc(
         size: _testSize,
@@ -255,8 +240,7 @@ testWidgets('DiscreteCircle Ticker has been disposed.',
     tester.verifyTickersWereDisposed();
   });
 
-  testWidgets('WaveDots Ticker has been disposed.',
-      (WidgetTester tester) async {
+  testWidgets('WaveDots Ticker has been disposed.', (WidgetTester tester) async {
     await tester.pumpWidget(
       baseStructure(const WaveDots(
         size: _testSize,

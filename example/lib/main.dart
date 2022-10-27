@@ -216,11 +216,7 @@ final listOfAnimations = <AppBody>[
   ),
   AppBody(
     'discreteCircle',
-    LoadingAnimationWidget.discreteCircle(
-        color: Colors.white,
-        size: _kSize,
-        secondRingColor: Colors.black,
-        thirdRingColor: Colors.purple),
+    LoadingAnimationWidget.discreteCircle(color: Colors.white, size: _kSize, secondRingColor: Colors.black, thirdRingColor: Colors.purple),
   ),
   AppBody(
     'threeArchedCircle',
@@ -296,7 +292,7 @@ final listOfAnimations = <AppBody>[
   AppBody(
     'dotsTriangle',
     LoadingAnimationWidget.dotsTriangle(
-      color: Colors.white,
+      first: Colors.white,
       size: _kSize,
     ),
   ),

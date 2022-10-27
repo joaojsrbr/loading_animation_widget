@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 
 import 'beat/beat.dart';
+import 'bouncing_ball/bouncing_ball.dart';
 import 'discrete_circle/discrete_circle.dart';
-import 'three_rotating_dots/three_rotating_dots.dart';
 import 'dots_triangle/dots_triangle.dart';
-import 'two_rotating_arc/two_rotating_arc.dart';
-import 'hexagon_dots/hexagon_dots.dart';
+import 'falling_dot/falling_dot.dart';
 import 'flickr/flickr.dart';
+import 'four_rotating_dots/four_rotating_dots.dart';
 import 'half_triangle_dot/half_triangle_dot.dart';
-
+import 'hexagon_dots/hexagon_dots.dart';
 import 'horizontal_rotating_dots/horizontal_rotating_dots.dart';
 import 'ink_drop/ink_drop.dart';
 import 'newton_cradle/newton_cradle.dart';
-import 'twisting_dots/twisting_dots.dart';
+import 'prograssive_dots/prograssive_dots.dart';
 import 'staggered_dots_wave/staggered_dots_wave.dart';
 import 'stretched_dots/stretched_dots.dart';
-import 'wave_dots/wave_dots.dart';
-
-import 'bouncing_ball/bouncing_ball.dart';
 import 'three_arched_circle/three_arched_circle.dart';
-import 'prograssive_dots/prograssive_dots.dart';
-import 'four_rotating_dots/four_rotating_dots.dart';
-import 'falling_dot/falling_dot.dart';
+import 'three_rotating_dots/three_rotating_dots.dart';
+import 'twisting_dots/twisting_dots.dart';
+import 'two_rotating_arc/two_rotating_arc.dart';
+import 'wave_dots/wave_dots.dart';
 
 class LoadingAnimationWidget {
   LoadingAnimationWidget._();
@@ -163,12 +161,16 @@ class LoadingAnimationWidget {
   /// Three dots in each vertice of an equilateral triangle expand towards side
   /// then moves to next vertice. Required color is applied to all dots.
   static Widget dotsTriangle({
-    required Color color,
+    required Color first,
+    Color? second,
+    Color? third,
     required double size,
     Key? key,
   }) {
     return DotsTriangle(
-      color: color,
+      first: first,
+      second: second,
+      third: third,
       size: size,
       key: key,
     );

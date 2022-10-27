@@ -1,13 +1,20 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
+
 import 'build_sides.dart';
 
 class DotsTriangle extends StatefulWidget {
   final double size;
-  final Color color;
+  final Color first;
+  final Color? second;
+  final Color? third;
+
   const DotsTriangle({
     Key? key,
-    required this.color,
+    required this.first,
+    this.second,
+    this.third,
     required this.size,
   }) : super(key: key);
 
@@ -15,8 +22,7 @@ class DotsTriangle extends StatefulWidget {
   _DotsTriangleState createState() => _DotsTriangleState();
 }
 
-class _DotsTriangleState extends State<DotsTriangle>
-    with SingleTickerProviderStateMixin {
+class _DotsTriangleState extends State<DotsTriangle> with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
 
   @override
@@ -30,7 +36,9 @@ class _DotsTriangleState extends State<DotsTriangle>
 
   @override
   Widget build(BuildContext context) {
-    final Color color = widget.color;
+    final Color first = widget.first;
+    final Color second = widget.second ?? widget.first;
+    final Color third = widget.third ?? widget.first;
     final double size = widget.size;
     final double dotDepth = size / 8;
     final double dotLength = size / 2;
@@ -59,7 +67,7 @@ class _DotsTriangleState extends State<DotsTriangle>
                       rotationOrigin: Offset(-(size - dotDepth) / 2, 0),
                       maxLength: dotLength,
                       depth: dotDepth,
-                      color: color,
+                      color: first,
                       controller: _animationController,
                       interval: interval,
                     ),
@@ -73,7 +81,7 @@ class _DotsTriangleState extends State<DotsTriangle>
                     rotationOrigin: Offset((size - dotDepth) / 2, 0),
                     maxLength: dotLength,
                     depth: dotDepth,
-                    color: color,
+                    color: second,
                     controller: _animationController,
                     interval: interval,
                   ),
@@ -83,7 +91,7 @@ class _DotsTriangleState extends State<DotsTriangle>
                   child: BuildSides.forward(
                     maxLength: dotLength,
                     depth: dotDepth,
-                    color: color,
+                    color: third,
                     controller: _animationController,
                     interval: interval,
                   ),
